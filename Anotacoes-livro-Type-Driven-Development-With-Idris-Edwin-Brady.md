@@ -44,6 +44,30 @@ Podemos caracterizar o Type-driven development como um processo **iterativo** da
 
 *Dependent type* é um tipo **calculado** a partir de outros valores, em outras palavras, **dependem** de outros valores.
 Ao incluir valores em um tipo podemos tornar os tipos tão precisos quanto necessários.
+Tipos dependentes são quando valores podem ser utilizados como parte de um Tipo, o Tipo depende de um valor, ex:
+
+``function soma(tam: int, vetor: array(int, tam)) -> int``  
+
+``array(int, tam)`` é um tipo dependente, **tam** pode ser qualquer valor, até mesmo algo fornecido pelo usuário, e ele está em um tipo.
+
+<br>
+
+Pensando em uma função que atualiza a idade de uma pessoa. Ela poderia ter a seguinte assinatura:
+
+``atualizaIdade :: Pessoa -> Int -> Pessoa``   
+
+Pensando que não seja possível uma idades < 0
+
+``atualizaIdade :: Pessoa -> (a :: Int, a > 0) -> Pessoa``  
+
+Agora o tipo carrega informação sobre o conteúdo. E isso é verificado em tempo de compilação.
+
+<br>
+
+``(n: Int) -> (m: Int) -> (p: m < n) -> Foo``
+
+Recebe dois inteiros, osegundo deve ser manor que o primeiro e devolve um Foo.
+**p** é uma prova de que **m < n**, então os parâmetros tem que obedecer a restrição.
 
 <br>
 
