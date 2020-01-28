@@ -36,15 +36,13 @@ o tipo criado.
 
 #### Type, define, refine: O processo do Type-driven development
 
-Podemos cDependent typesaracterizar o Type-driven development como um processo **iterativo** de **type**, **define**, **refine**,
-escrever um tipo, implementar um função que satisfaça esse tipo, e refinar o tipo e a função à medida que você
-aprende mais sobre o problema.
+Podemos caracterizar o Type-driven development como um processo **iterativo** das seguintes etapas: **type**, **define**, **refine**, ou seja, escrever um tipo, implementar um função que satisfaça esse tipo, e refinar o tipo e a função à medida que você aprende mais sobre o problema.
 
 <br>
 
 #### Dependent types
 
-A *dependent type* é um tipo **calculado** a partir de outros valores, em outras palavras, **dependem** de outros valores.
+*Dependent type* é um tipo **calculado** a partir de outros valores, em outras palavras, **dependem** de outros valores.
 Ao incluir valores em um tipo podemos tornar os tipos tão precisos quanto necessários.
 
 
