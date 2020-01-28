@@ -45,5 +45,34 @@ Podemos caracterizar o Type-driven development como um processo **iterativo** da
 *Dependent type* é um tipo **calculado** a partir de outros valores, em outras palavras, **dependem** de outros valores.
 Ao incluir valores em um tipo podemos tornar os tipos tão precisos quanto necessários.
 
+<br>
+
+##### Linguagem funcional
+
+Não existe um concenso sobre uma definição do que é uma linguagem funcional, mas tomamos os seguintes pontos:
+
+* Os programas são compostos de funções.
+* A execução do programa consiste na avaliação de funções.
+* Funções são uma construção first-class da linguagem.
+
+Programação funcional se difere do paradigma imperativo por se preocupar com a avaliação de funções e não com a execução de instruções.
+
+Em uma linguagem de programação funcional pura existem dois pontos:
+
+* As funções não têm **efeitos colaterais**, como modificar variáveis globais, lançar exceções ou mostras algo do console.
+* Como resultado, para **quaisquer entradas** específicas, uma função sempre fornecerá o **mesmo resultado**.
+
+<br>
+
+#### Pureza e transparência referêncial  
+
+O conceito chave de uma **função pura** é que as mesmas entradas sempre devem produzir as mesmas saídas, essa propriedade se chama ``transparência referencial``.
+Uma expressão em uma função é **referêncialmente transparente** se puder ser substituída pelo resultado sem alterar o comportamento da função, se a função não produz efeitos colaterais essa propriedade é verdadeira.
+
+
+
+
+
+
 
 
