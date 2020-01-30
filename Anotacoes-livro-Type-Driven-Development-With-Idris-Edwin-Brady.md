@@ -69,6 +69,24 @@ Agora o tipo carrega informação sobre o conteúdo. E isso é verificado em tem
 Recebe dois inteiros, osegundo deve ser manor que o primeiro e devolve um Foo.
 **p** é uma prova de que **m < n**, então os parâmetros tem que obedecer a restrição.
 
+Um conceito fundamental do Type-drive development com uma linguagem com tipos dependentes é que o **tipo** de uma variável pode ser **calculado a partir do valor de outra variável**
+
+<br>
+
+```idris
+f : Bool -> Type
+f x = case x of
+	True => Int
+	False => String
+```
+
+```idris
+fn : (x : Bool) -> f x -> String
+fn x val = case x of
+	True => cast val
+	False => val
+```
+
 <br>
 
 ##### Linguagem funcional
@@ -93,8 +111,12 @@ Em uma linguagem de programação funcional pura existem dois pontos:
 O conceito chave de uma **função pura** é que as mesmas entradas sempre devem produzir as mesmas saídas, essa propriedade se chama ``transparência referencial``.
 Uma expressão em uma função é **referêncialmente transparente** se puder ser substituída pelo resultado sem alterar o comportamento da função, se a função não produz efeitos colaterais essa propriedade é verdadeira.
 
+<br>
 
+##### First-class types
 
+Uma linguagem que tem **first-class** types significa que  uma expressão é tratada como um valor, sem restrição sintática, sendo assim ela pode ser passada como parâmetro pra um função, retornada como resultado de uma função e atribuída a uma variável.  
+Na maioria das linguagens estaticamente tipadas existem restrições de onde os tipos podem ser usados, e também há uma separação sintática entre tipos e valores, as espressões como first-class podem ser utilizadas da mesma forma como qualquer valor e também como parte de um tipo.  
 
 
 
