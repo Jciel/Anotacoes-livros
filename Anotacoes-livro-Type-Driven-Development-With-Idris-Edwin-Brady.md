@@ -1,3 +1,4 @@
+### Type-driven development
 
 #### O que são tipos
 
@@ -39,7 +40,12 @@ Alguma linguagens de programação como Haskell e ML permitem que seja omitido a
 
 #### Type, define, refine: O processo do Type-driven development
 
-Podemos caracterizar o Type-driven development como um processo **iterativo** das seguintes etapas: **type**, **define**, **refine**, ou seja, escrever um tipo, implementar um função que satisfaça esse tipo, e refinar o tipo e a função à medida que você aprende mais sobre o problema.
+Podemos caracterizar o Type-driven development como um processo **iterativo** das seguintes etapas: **type**, **define**, **refine**, ou seja, escrever um tipo, implementar um função que satisfaça esse tipo, e refinar o tipo e a função à medida que você aprende mais sobre o problema.  
+Em Type-driven development seguimos o processo ``type, define, refine``  
+* ``type`` Escreva um **tipo** para iniciao o precesso de desenvolvimento ou use um tipo existente para decidir como continuar o processo;
+* ``Define`` Crie a estrutura de definição de uma função, criando um esboço de uma função ou dividindo em componente menores;
+* ``Refine`` Melhore a definição da função ou o tipo tornando-os mas precisos;
+
 
 <br>
 
@@ -119,7 +125,7 @@ Uma expressão em uma função é **referêncialmente transparente** se puder se
 ##### First-class types
 
 Uma linguagem que tem **first-class** types significa que  uma expressão é tratada como um valor, sem restrição sintática, sendo assim ela pode ser passada como parâmetro pra um função, retornada como resultado de uma função e atribuída a uma variável.  
-Na maioria das linguagens estaticamente tipadas existem restrições de onde os tipos podem ser usados, e também há uma separação sintática entre tipos e valores, as espressões como first-class podem ser utilizadas da mesma forma como qualquer valor e também como parte de um tipo.  
+Na maioria das linguagens estaticamente tipadas existem restrições de onde os tipos podem ser usados, e também há uma separação sintática entre tipos e valores. As espressões como first-class podem ser utilizadas da mesma forma como qualquer valor e também como parte de um tipo.  
 
 <br>
 
@@ -131,7 +137,7 @@ Na maioria das linguagens estaticamente tipadas existem restrições de onde os 
 * Em uma linguagem de programação funcional a execução de um programa consiste na **avaliação de funções**;
 * Em uma linguagem funcional as funções não tem **efeitos colaterais**;
 * Ao invez de escrever programas com efeitos colateriais, pode-se escrever **programas que descrevam** efeitos colateriais explicitamente nos tipos;
-* Uma total function é garantida que **produzirá um resultado** para qualquer entrada em tempo finito;
+* Uma *total function* é garantida que **produzirá um resultado** para qualquer entrada em tempo finito;
 
 <br>
 
