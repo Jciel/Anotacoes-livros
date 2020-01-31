@@ -21,6 +21,7 @@ A função dos tipos mais significativa para um programador é a terceira. Os ti
 
 <br>
 
+#### Type-driven development
 Type-driven development é um estilo de programação onde nós escrevemos os **tipos primeiro** e usamos esses tipos para guiar a
 **definição de funções**. O processo geral é escrever os tipos de dados e em seguida para cada função fazer o seguinte:
 
@@ -117,6 +118,25 @@ Uma expressão em uma função é **referêncialmente transparente** se puder se
 
 Uma linguagem que tem **first-class** types significa que  uma expressão é tratada como um valor, sem restrição sintática, sendo assim ela pode ser passada como parâmetro pra um função, retornada como resultado de uma função e atribuída a uma variável.  
 Na maioria das linguagens estaticamente tipadas existem restrições de onde os tipos podem ser usados, e também há uma separação sintática entre tipos e valores, as espressões como first-class podem ser utilizadas da mesma forma como qualquer valor e também como parte de um tipo.  
+
+<br>
+
+* Tipos são um **meio para classificar valores**. Linguagens de programação usam tipos para organizar os dados na memória;
+* Podemos ver um **Tipo** como uma especificação para que uma implementação de linguagem (Type Checker) possa verificar se um programa está em conformidade com essa especificação;
+* Type-driven development é um **processo iterativo** de criar um tipo para modelar um sistema, definir funções para esse tipo e refinar ambos a medida que se aprende mais sobre o problema a ser resolvido;
+* Em Type-driven development um tipo é visto mais como um **plano**;
+* Dependent Types permite criarmos **tipos mais precisos** e descritivos para os nosso programas;
+* Em uma linguagem de programação funcional a execução de um programa consiste na **avaliação de funções**;
+* Em uma linguagem funcional as funções não tem **efeitos colaterais**;
+* Ao invez de escrever programas com efeitos colateriais, pode-se escrever **programas que descrevam** efeitos colateriais explicitamente nos tipos;
+* Uma total function é garantida que **produzirá um resultado** para qualquer entrada em tempo finito;
+
+
+
+
+
+
+
 
 
 
