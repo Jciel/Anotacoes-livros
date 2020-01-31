@@ -31,7 +31,9 @@ Type-driven development é um estilo de programação onde nós escrevemos os **
 
 Em Type-driven development devemos pensar nos tipos como um **plano**, com o *type checker* atuando como um guia, nos
 levando até um programa robusto e funcional, usando o compilador regularmente para verificar se o programa satisfaz
-o tipo criado.
+o tipo criado.  
+
+Alguma linguagens de programação como Haskell e ML permitem que seja omitido a definição de tipos da função, tendo o compilardor inferir o tipo, em Type-drive development é encorajado a declaração de tipos, ajudando a documentação do programa.
 
 <br>
 
@@ -131,8 +133,47 @@ Na maioria das linguagens estaticamente tipadas existem restrições de onde os 
 * Ao invez de escrever programas com efeitos colateriais, pode-se escrever **programas que descrevam** efeitos colateriais explicitamente nos tipos;
 * Uma total function é garantida que **produzirá um resultado** para qualquer entrada em tempo finito;
 
+<br>
 
+##### Partial application
+Quando temos uma função que possui mais de um parâmetro, podemos criar uma versão mais especializada dessa função passando apenas alguns dos argumentos e omitindo o restante, essa técnica é chamada de **Partial application**
+Imaginamos uma função ``add``
 
+```idris
+add : Int -> int -> Int
+add x y = x + y
+```
+
+Se aplicarmos essa função apenas com o primeiro parâmetro é retornado uma outra função com a definição ``Int -> Int``, assim criamos uma função especializada que adiciona 2 a qualquer valor inteiro passado.
+```
+addTwo = add 2
+
+addTwo 5 // 7
+
+addTwo 20 // 22
+```
+
+<br>
+
+##### Higher-order function types
+Não há restrição ao argumento ou tipo de retorno de uma função, dessa forma, funções podem ser passadas como argumento de outra função, essas funções são chamdas de **Higher-order function**.  
+Higher-order function podem ser utilizadas para criar abstrações para padrões de desenvolvimento.
+
+<br>
+
+##### Composite types  
+Composite types são tipos compostos por outros tipos
+``Tuple`` é uma collection de tamanho fixo onde cada valor **pode ser de tipos diferentes**.
+```
+(Integer, String)
+(49, "pages")
+```
+
+``List`` é uma collection de valores, pode ter tamanho variados, todos os elementos de uma List **devem ser do mesmo tipo**.
+```
+List Integer
+[1, 2, 3, 4, 5]
+```
 
 
 
